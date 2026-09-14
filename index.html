@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Julissa Lescano — Estudiante de la carrera Ingenieria de Software</title>
+  <meta name="description"
+    content="Portafolio profesional de Julissa Lescano. Ingenieria de Software.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+
+<body id="top">
+
+  <!-- ========================================================================
+       HEADER & BARRA DE NAVEGACIÓN
+       ======================================================================== -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#top" class="nav-brand" aria-label="Julissa Lescano - Inicio">
+          <span class="nav-brand-badge" aria-hidden="true">JL</span>
+          <span>Julissa Lescano</span>
+        </a>
+
+        <!-- Menú de Enlaces con anclas reales -->
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+          <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
+          <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+          <li><a href="#design-system" class="nav-link">Design System</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+
+        <!-- Acciones del Header: Toggle Tema y Menú Hamburguesa Móvil -->
+        <div class="nav-actions">
+          <button type="button" id="theme-toggle" class="btn-icon" aria-label="Cambiar a tema claro"
+            title="Cambiar a tema claro">
+            <span class="theme-icon" aria-hidden="true">
+              <!-- Ícono Sol/Luna administrado por JS -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+            </span>
+          </button>
+
+          <a href="#contacto" class="btn btn-primary btn-sm">Contratar</a>
+
+          <!-- Botón Hamburguesa Accesible para Móviles -->
+          <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu"
+            aria-label="Abrir menú de navegación">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         01. HERO SECTION (#inicio)
+         ====================================================================== -->
+    <section id="inicio" class="section hero">
+      <div class="container">
+        <div class="hero-grid">
+
+          <div class="hero-content">
+            <!-- Badge de Estado Activo -->
+            <div class="badge badge-status">
+              <span>DISPONIBLE PARA PROYECTOS / OPEN TO WORK</span>
+            </div>
+
+            <!-- Único <h1> semántico con estilo condensado y acento cursivo -->
+            <h1 class="hero-title">
+              Julissa Lescano —<br>
+              <span class="font-accent">Software</span> Engineer
+            </h1>
+
+            <p class="hero-bio">
+            Estudiante de Ingeniería en Software con interés en plataformas web escalables y de alto rendimiento, aplicando diseño moderno en cada interfaz que construyo.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#proyectos" class="btn btn-primary">
+                <span>Ver proyectos ahora</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a href="#habilidades" class="btn btn-secondary">
+                <span>Explorar Stack (15+)</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+
+            <div class="hero-stack-inline">
+              <span>•</span>
+              <span><strong>Stack Principal:</strong> HTML5, CSS3, Python, PostgreSQL /Git & GitHub, Scrum / RUP</span>
+            </div>
+          </div>
+
+          <!-- Composición Visual del Hero: Avatar con Aros Neón y Badges Flotantes -->
+          <div class="hero-visual">
+            <div class="hero-avatar-wrapper">
+              <div class="hero-avatar-inner">
+                <img src="assets/perfil.jpeg"
+                  alt="Retrato fotográfico de Alex Rivera, Desarrolladora Frontend en su espacio de trabajo">
+              </div>
+            </div>
+
+            <!-- Badges flotantes interactivos -->
+            <div class="floating-badge floating-badge-1" aria-hidden="true">
+              <span style="color: #a855f7;"></span>
+              <span>Frontend Dev</span>
+            </div>
+            <div class="floating-badge floating-badge-2" aria-hidden="true">
+              <span style="color: #38bdf8;"></span>
+              <span>Especialista Web</span>
+            </div>
+            <div class="floating-badge floating-badge-3" aria-hidden="true">
+              <span style="color: #10b981;"></span>
+              <span>100% Calidad Código</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         BARRA DE ESTADÍSTICAS (STATS ROW)
+         ====================================================================== -->
+    <div class="stats-section" aria-label="Métricas y estadísticas profesionales">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value">3+</div>
+            <div class="stat-title">Años de Aprendiz</div>
+            <div class="stat-desc">Desarrollo continuo y creativo</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">12+</div>
+            <div class="stat-title">Proyectos Educativos Completados</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">10+</div>
+            <div class="stat-title">Tecnologías & Herramientas</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">99.9%</div>
+            <div class="stat-title">Satisfacción de Entrega</div>
+            <div class="stat-desc">Rendimiento y arquitectura limpia</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         02. SOBRE MÍ (#sobre-mi)
+         ====================================================================== -->
+    <section id="sobre-mi" class="section">
+      <div class="container">
+
+        <header class="section-header">
+          <span class="section-tag">01 / TRAYECTORIA</span>
+          <h2 class="section-title">Sobre Mí</h2>
+          <p class="section-subtitle">
+            Especializándome como arquitecta web, soluciones y proyectos. Las emociones desde la interfaz, con
+            compromiso de honestidad técnica.
+          </p>
+        </header>
+
+        <div class="about-grid">
+
+          <!-- Columna Izquierda: Bio y <aside> Semántico -->
+          <div class="about-info-col">
+            <div class="card about-bio-card">
+              <div class="about-profile-header">
+                <div class="about-avatar-mini">
+                  <img src="assets/avatar.jpg" alt="Alex Rivera">
+                </div>
+                <div>
+                  <h3 class="about-profile-title">Alex Rivera</h3>
+                  <div class="about-profile-role">Lead Frontend Architect</div>
+                </div>
+              </div>
+              <p class="about-text">
+                Graduada en Ingeniería de Software con pasión por la innovación en la web abierta. Combino ingeniería
+                rigurosa con experiencias visuales interactivas: shadermaps, WebGL y microfrontends sin comprometer
+                jamás la accesibilidad, usabilidad ni el rendimiento en producción.
+              </p>
+            </div>
+
+            <!-- <aside> semántico obligatorio para Formación & Investigación -->
+            <aside class="about-aside" aria-label="Formación académica y líneas de investigación">
+              <h3 class="aside-title">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+                Formación & Líneas de Investigación
+              </h3>
+
+              <div class="education-block">
+                <div class="education-degree">Grado en Ingeniería de Software</div>
+                <div class="education-meta">2018 — 2022 • Mención de Honor en Proyecto Fin de Grado</div>
+                <p class="education-desc">
+                  Especialización en sistemas distribuidos, computación gráfica y arquitecturas web de gran escala.
+                </p>
+              </div>
+
+              <div class="research-block">
+                <div class="stat-title" style="margin-bottom: var(--space-xs);">Líneas de investigación activas:</div>
+                <ul class="research-list">
+                  <li class="research-item">Rendimiento Web y Renderizado Declarativo</li>
+                  <li class="research-item">Shaders GLSL y Computación Gráfica en WebGL</li>
+                  <li class="research-item">Arquitectura Microfrontends con Module Federation</li>
+                  <li class="research-item">Design Tokens unificados y Sincronización Figma-Code</li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+
+          <!-- Columna Derecha: Mi Proceso de Trabajo -->
+          <div class="process-wrapper">
+            <div class="process-header">
+              <h3 class="process-title">Mi Proceso de Trabajo</h3>
+              <span class="badge">Metodología Ágil / Feedback</span>
+            </div>
+
+            <div class="process-steps">
+              <!-- Paso 1 -->
+              <div class="process-card">
+                <div class="process-number">01</div>
+                <div>
+                  <h4 class="process-card-title">Descubrimiento & Diagnóstico</h4>
+                  <p class="process-card-desc">
+                    Briefing exhaustivo, análisis de viabilidad, auditoría técnica del stack existente y definición de
+                    KPIs clave: accesibilidad, Core Web Vitals y escalabilidad.
+                  </p>
+                </div>
+                <div class="process-icon" aria-hidden="true">🧭</div>
+              </div>
+
+              <!-- Paso 2 -->
+              <div class="process-card">
+                <div class="process-number">02</div>
+                <div>
+                  <h4 class="process-card-title">Diseño & Prototipado</h4>
+                  <p class="process-card-desc">
+                    Wireframes interactivos en Figma, formulación de sistema atómico y prototipos de alta fidelidad
+                    validados antes de tocar una sola línea de código.
+                  </p>
+                </div>
+                <div class="process-icon" aria-hidden="true">🎨</div>
+              </div>
+
+              <!-- Paso 3 -->
+              <div class="process-card">
+                <div class="process-number">03</div>
+                <div>
+                  <h4 class="process-card-title">Desarrollo & Refactor</h4>
+                  <p class="process-card-desc">
+                    Ingeniería limpia con TypeScript moderno, WebGL cuando aporte valor, maquetación con componentes
+                    modulares, testing unitario y buenas prácticas.
+                  </p>
+                </div>
+                <div class="process-icon" aria-hidden="true">💻</div>
+              </div>
+
+              <!-- Paso 4 -->
+              <div class="process-card">
+                <div class="process-number">04</div>
+                <div>
+                  <h4 class="process-card-title">Entrega & Optimización</h4>
+                  <p class="process-card-desc">
+                    Pipeline de CI/CD automatizado, despliegues continuos sin tiempo de inactividad, monitoreo de
+                    performance en producción y documentación completa.
+                  </p>
+                </div>
+                <div class="process-icon" aria-hidden="true">🚀</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         03. HABILIDADES & STACK TECNOLÓGICO (#habilidades)
+         ====================================================================== -->
+    <section id="habilidades" class="section">
+      <div class="container">
+
+        <header class="section-header"
+          style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: var(--space-md);">
+          <div>
+            <span class="section-tag">02 / COMPETENCIAS</span>
+            <h2 class="section-title">Habilidades & Stack Tecnológico</h2>
+            <p class="section-subtitle">
+              Dominio balanceado entre la creación de componentes visuales, arquitectura y continuidad de servicios
+              críticos.
+            </p>
+          </div>
+          <div style="display: flex; gap: var(--space-xs);">
+            <span class="badge">95% Calidad Test</span>
+            <span class="badge">10+ Certificados</span>
+          </div>
+        </header>
+
+        <div class="skills-grid">
+
+          <!-- Tarjeta 1: Frontend & Creative -->
+          <div class="skills-category-card">
+            <div class="skills-category-header">
+              <h3 class="skills-category-title">
+                <span aria-hidden="true">🎨</span>
+                Frontend & Creative
+              </h3>
+              <span class="badge badge-tech">8 Techs</span>
+            </div>
+
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">React 18 & Next.js 14</span>
+                  <span class="skill-level">Avanzado • 95%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 95%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">TypeScript</span>
+                  <span class="skill-level">Avanzado • 90%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Three.js & WebGL</span>
+                  <span class="skill-level">Intermedio • 80%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 80%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Tailwind CSS & CSS3 Puro</span>
+                  <span class="skill-level">Avanzado • 98%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 98%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 2: Backend & API -->
+          <div class="skills-category-card">
+            <div class="skills-category-header">
+              <h3 class="skills-category-title">
+                <span aria-hidden="true">⚙️</span>
+                Backend & API
+              </h3>
+              <span class="badge badge-tech">6 Techs</span>
+            </div>
+
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Node.js & Express</span>
+                  <span class="skill-level">Avanzado • 88%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 88%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Python / FastAPI</span>
+                  <span class="skill-level">Intermedio • 75%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 75%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">GraphQL & REST APIs</span>
+                  <span class="skill-level">Avanzado • 86%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 86%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">PostgreSQL & Prisma</span>
+                  <span class="skill-level">Intermedio • 82%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 82%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tarjeta 3: Cloud & DevOps -->
+          <div class="skills-category-card">
+            <div class="skills-category-header">
+              <h3 class="skills-category-title">
+                <span aria-hidden="true">☁️</span>
+                Cloud & DevOps
+              </h3>
+              <span class="badge badge-tech">7 Techs</span>
+            </div>
+
+            <div class="skills-list">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Docker & Contenedores</span>
+                  <span class="skill-level">Avanzado • 84%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 84%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">AWS (S3, CloudFront)</span>
+                  <span class="skill-level">Intermedio • 78%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 78%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">CI/CD & GitHub Actions</span>
+                  <span class="skill-level">Avanzado • 92%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 92%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Linux CLI & Servidores</span>
+                  <span class="skill-level">Avanzado • 85%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 85%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         04. PROYECTOS DESTACADOS (#proyectos)
+         ====================================================================== -->
+    <section id="proyectos" class="section">
+      <div class="container">
+
+        <header class="section-header">
+          <span class="section-tag">03 / PORTAFOLIO</span>
+          <h2 class="section-title">Proyectos Destacados</h2>
+          <p class="section-subtitle">
+            Selección de aplicaciones web en producción y experimentos aplicados con tecnologías modernas.
+          </p>
+        </header>
+
+        <!-- Chips de Filtrado Real por Tecnología -->
+        <div class="projects-filter-bar" role="toolbar" aria-label="Filtrar proyectos por tecnología">
+          <button type="button" class="filter-btn active" data-filter="all">Todos</button>
+          <button type="button" class="filter-btn" data-filter="react-18">React 18</button>
+          <button type="button" class="filter-btn" data-filter="webgl">WebGL</button>
+          <button type="button" class="filter-btn" data-filter="full-stack">Full-Stack</button>
+          <button type="button" class="filter-btn" data-filter="ui-systems">UI Systems</button>
+        </div>
+
+        <!-- Grilla de Tarjetas de Proyectos (<article> semánticos con <figure> + <figcaption>) -->
+        <div class="projects-grid">
+
+          <!-- PROYECTO 1: Nexus Dashboard -->
+          <article class="project-card" data-category="react-18 full-stack ui-systems">
+            <figure class="project-figure">
+              <img src="assets/nexus-dashboard.jpg"
+                alt="Captura de pantalla de la interfaz de usuario de Nexus Dashboard">
+              <figcaption class="project-figcaption">React 18 SaaS</figcaption>
+            </figure>
+            <div class="project-body">
+              <div class="project-tags-row">
+                <span class="badge badge-tech">REACT 18</span>
+                <span class="badge badge-tech">TYPESCRIPT</span>
+                <span class="badge badge-tech">TAILWIND</span>
+              </div>
+              <h3 class="project-title">Nexus Dashboard</h3>
+              <p class="project-description">
+                Plataforma analítica SaaS empresarial con telemetría en tiempo real, alertas predictivas vía WebSockets
+                y visualizaciones vectoriales fluidas con D3.js.
+              </p>
+              <div class="project-actions">
+                <button type="button" class="btn btn-secondary btn-sm" data-open-modal="nexus-dashboard">
+                  <span>Ver más</span>
+                  <span aria-hidden="true">↗</span>
+                </button>
+                <div class="project-icon-links">
+                  <!-- Ícono de GitHub ("Código") -->
+                  <a href="https://github.com/alexrivera-dev/nexus-dashboard" target="_blank" rel="noopener noreferrer"
+                    class="project-icon-link" aria-label="Ver código fuente en GitHub de Nexus Dashboard"
+                    title="Código (GitHub)">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                      </path>
+                    </svg>
+                  </a>
+                  <!-- Ícono de Flecha Externa ("Demo") -->
+                  <a href="https://nexus-dashboard-demo.dev" target="_blank" rel="noopener noreferrer"
+                    class="project-icon-link" aria-label="Ver demo interactiva de Nexus Dashboard" title="Demo en vivo">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROYECTO 2: Aura Studio -->
+          <article class="project-card" data-category="webgl ui-systems">
+            <figure class="project-figure">
+              <img src="assets/aura-studio.jpg" alt="Renderizado 3D generativo de malla toroidal en Aura Studio">
+              <figcaption class="project-figcaption">WebGL 3D</figcaption>
+            </figure>
+            <div class="project-body">
+              <div class="project-tags-row">
+                <span class="badge badge-tech">THREE.JS</span>
+                <span class="badge badge-tech">GLSL SHADERS</span>
+                <span class="badge badge-tech">VITE</span>
+              </div>
+              <h3 class="project-title">Aura Studio</h3>
+              <p class="project-description">
+                Laboratorio de experimentación 3D interactiva en el navegador con shaders GLSL procedurales, efectos
+                post-procesado y audio reactivo para ambientaciones sonoras.
+              </p>
+              <div class="project-actions">
+                <button type="button" class="btn btn-secondary btn-sm" data-open-modal="aura-studio">
+                  <span>Ver más</span>
+                  <span aria-hidden="true">↗</span>
+                </button>
+                <div class="project-icon-links">
+                  <!-- Ícono de GitHub ("Código") -->
+                  <a href="https://github.com/alexrivera-dev/aura-studio" target="_blank" rel="noopener noreferrer"
+                    class="project-icon-link" aria-label="Ver código fuente en GitHub de Aura Studio"
+                    title="Código (GitHub)">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                      </path>
+                    </svg>
+                  </a>
+                  <!-- Ícono de Flecha Externa ("Demo") -->
+                  <a href="https://aura-studio-webgl.dev" target="_blank" rel="noopener noreferrer"
+                    class="project-icon-link" aria-label="Ver demo interactiva de Aura Studio" title="Demo en vivo">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROYECTO 3: Chronos Flow -->
+          <article class="project-card" data-category="react-18 full-stack">
+            <figure class="project-figure">
+              <img src="assets/chronos-flow.jpg"
+                alt="Captura de pantalla de la aplicación de gestión y productividad Chronos Flow">
+              <figcaption class="project-figcaption">Full-Stack App</figcaption>
+            </figure>
+            <div class="project-body">
+              <div class="project-tags-row">
+                <span class="badge badge-tech">NEXT.JS 14</span>
+                <span class="badge badge-tech">POSTGRESQL</span>
+                <span class="badge badge-tech">PRISMA</span>
+              </div>
+              <h3 class="project-title">Chronos Flow</h3>
+              <p class="project-description">
+                Suite empresarial de productividad con sincronización offline-first, arquitectura multi-tenant con
+                granularidad de permisos y automatización de flujos de trabajo.
+              </p>
+              <div class="project-actions">
+                <button type="button" class="btn btn-secondary btn-sm" data-open-modal="chronos-flow">
+                  <span>Ver más</span>
+                  <span aria-hidden="true">↗</span>
+                </button>
+                <div class="project-icon-links">
+                  <!-- Ícono de GitHub ("Código") -->
+                  <a href="https://github.com/alexrivera-dev/chronos-flow" target="_blank" rel="noopener noreferrer"
+                    class="project-icon-link" aria-label="Ver código fuente en GitHub de Chronos Flow"
+                    title="Código (GitHub)">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                      </path>
+                    </svg>
+                  </a>
+                  <!-- Ícono de Flecha Externa ("Demo") -->
+                  <a href="https://chronos-flow-app.dev" target="_blank" rel="noopener noreferrer"
+                    class="project-icon-link" aria-label="Ver demo interactiva de Chronos Flow" title="Demo en vivo">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- ====================================================================
+             CASO DE ESTUDIO DESTACADO (DEEP DIVE DE REFERENCIA)
+             ==================================================================== -->
+        <div class="case-study-card">
+          <div class="case-study-top">
+            <div>
+              <span class="badge">CASO DE ESTUDIO DESTACADO / Proyecto Real</span>
+              <h3 class="case-study-title">Detalle del Proyecto: Nexus Dashboard</h3>
+            </div>
+            <div class="case-study-buttons">
+              <a href="https://nexus-dashboard-demo.dev" target="_blank" rel="noopener noreferrer"
+                class="btn btn-primary btn-sm">
+                <span>Ver Demo en Vivo</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a href="https://github.com/alexrivera-dev/nexus-dashboard" target="_blank" rel="noopener noreferrer"
+                class="btn btn-secondary btn-sm">
+                <span>Explorar en GitHub</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="case-study-grid">
+            <div>
+              <h4 class="case-study-section-title">PROBLEMA QUE RESUELVE</h4>
+              <p class="case-study-text">
+                Las plataformas tradicionales de analítica tienen retardos en actualización superiores a 4 segundos y
+                consumen más del 70% de CPU al renderizar miles de métricas concurrentes. Nexus resuelve el desfase a
+                menos de 100ms mediante buffers binarios optimizados sin comprometer el renderizado.
+              </p>
+
+              <h4 class="case-study-section-title">ARQUITECTURA & SOLUCIÓN TÉCNICA</h4>
+              <p class="case-study-text">
+                Desarrollada con React 18, Server Actions, estado compartido de baja latencia con Zustand, renderizado
+                canvas optimizado por Pixi.js y gráficas de alto refresco basadas en canvas WebGL. Microservicios
+                coordinados con RabbitMQ y WebSocket push.
+              </p>
+
+              <div class="case-study-metrics">
+                <div class="case-metric-box">
+                  <div class="case-metric-number">98/100</div>
+                  <div class="case-metric-label">Rendimiento Lighthouse</div>
+                </div>
+                <div class="case-metric-box">
+                  <div class="case-metric-number">1.1s</div>
+                  <div class="case-metric-label">Tiempo de Interactividad</div>
+                </div>
+                <div class="case-metric-box">
+                  <div class="case-metric-number">25k/s</div>
+                  <div class="case-metric-label">Concurrencia de Eventos</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="case-study-preview">
+              <img src="assets/nexus-dashboard.jpg" alt="Vista en detalle del panel de control de Nexus Dashboard">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         05. DESIGN SYSTEM & TOKENS (#design-system)
+         ====================================================================== -->
+    <section id="design-system" class="section">
+      <div class="container">
+
+        <header class="section-header">
+          <span class="section-tag">04 / ARQUITECTURA VISUAL</span>
+          <h2 class="section-title">Design System & Tokens</h2>
+          <p class="section-subtitle">
+            Especificación visual fundamentada: un token library estructurado para componentes modulares que garantizan
+            cohesión estética en toda la experiencia.
+          </p>
+        </header>
+
+        <div class="ds-grid">
+
+          <!-- Panel 1: Paleta Cromática -->
+          <div class="ds-card">
+            <h3 class="ds-card-title">
+              <span>Paleta Cromática del Sistema</span>
+              <span class="badge badge-tech">CSS :root</span>
+            </h3>
+            <div class="color-swatches-grid">
+              <div class="swatch-item">
+                <div class="swatch-color" style="background-color: var(--color-primary);"></div>
+                <div class="swatch-info">
+                  <div class="swatch-name">--color-primary</div>
+                  <div class="swatch-hex">#7c3aed</div>
+                </div>
+              </div>
+              <div class="swatch-item">
+                <div class="swatch-color" style="background-color: var(--color-secondary);"></div>
+                <div class="swatch-info">
+                  <div class="swatch-name">--color-secondary</div>
+                  <div class="swatch-hex">#c4b5fd</div>
+                </div>
+              </div>
+              <div class="swatch-item">
+                <div class="swatch-color"
+                  style="background-color: var(--color-background); border: 1px solid var(--color-border);"></div>
+                <div class="swatch-info">
+                  <div class="swatch-name">--color-background</div>
+                  <div class="swatch-hex">#0a0a0f</div>
+                </div>
+              </div>
+              <div class="swatch-item">
+                <div class="swatch-color"
+                  style="background-color: var(--color-surface); border: 1px solid var(--color-border);"></div>
+                <div class="swatch-info">
+                  <div class="swatch-name">--color-surface</div>
+                  <div class="swatch-hex">#12111c</div>
+                </div>
+              </div>
+              <div class="swatch-item">
+                <div class="swatch-color" style="background-color: var(--color-text);"></div>
+                <div class="swatch-info">
+                  <div class="swatch-name">--color-text</div>
+                  <div class="swatch-hex">#f8fafc</div>
+                </div>
+              </div>
+              <div class="swatch-item">
+                <div class="swatch-color" style="background-color: var(--color-text-muted);"></div>
+                <div class="swatch-info">
+                  <div class="swatch-name">--color-text-muted</div>
+                  <div class="swatch-hex">#94a3b8</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 2: Jerarquía Tipográfica -->
+          <div class="ds-card">
+            <h3 class="ds-card-title">
+              <span>Jerarquía Tipográfica</span>
+              <span class="badge badge-tech">Google Fonts</span>
+            </h3>
+            <div class="typography-spec">
+              <div class="type-sample">
+                <span style="font-family: var(--font-primary); font-size: 1.5rem; font-weight: 800;">H1 Display
+                  Condensed</span>
+                <span class="type-meta">Space Grotesk 800</span>
+              </div>
+              <div class="type-sample">
+                <span style="font-family: var(--font-primary); font-size: 1.2rem; font-weight: 700;">H2 Section Heading
+                  SemiBold</span>
+                <span class="type-meta">Space Grotesk 700</span>
+              </div>
+              <div class="type-sample">
+                <span style="font-family: var(--font-body); font-size: 0.9375rem;">Body Lead & Text Regular</span>
+                <span class="type-meta">Plus Jakarta Sans 400</span>
+              </div>
+              <div class="type-sample">
+                <span class="font-accent" style="font-size: 1.5rem;">Alex Creative & Accent Cursive</span>
+                <span class="type-meta">Instrument Serif 400 Italic</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 3: Sistema de Espaciado y Radios -->
+          <div class="ds-card">
+            <h3 class="ds-card-title">
+              <span>Sistema de Espaciado y Radios</span>
+              <span class="badge badge-tech">Variables</span>
+            </h3>
+            <div class="spacing-spec">
+              <div class="spacing-item">
+                <span class="spacing-label">--space-sm (12px)</span>
+                <div class="spacing-bar" style="width: 36px;"></div>
+              </div>
+              <div class="spacing-item">
+                <span class="spacing-label">--space-md (20px)</span>
+                <div class="spacing-bar" style="width: 60px;"></div>
+              </div>
+              <div class="spacing-item">
+                <span class="spacing-label">--space-lg (32px)</span>
+                <div class="spacing-bar" style="width: 96px;"></div>
+              </div>
+              <div class="spacing-item">
+                <span class="spacing-label">--space-xl (56px)</span>
+                <div class="spacing-bar" style="width: 168px;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel 4: Componentes en Vivo (Exactamente las mismas clases) -->
+          <div class="ds-card">
+            <h3 class="ds-card-title">
+              <span>Componentes en Vivo</span>
+              <span class="badge badge-tech">Live UI</span>
+            </h3>
+            <div style="display: flex; flex-direction: column; gap: var(--space-md);">
+              <div style="display: flex; flex-wrap: wrap; gap: var(--space-xs); align-items: center;">
+                <button type="button" class="btn btn-primary btn-sm">Botón Primario</button>
+                <button type="button" class="btn btn-secondary btn-sm">Botón Secundario</button>
+                <span class="badge">Badge Token</span>
+                <span class="badge badge-tech">React 18</span>
+              </div>
+              <div>
+                <input type="text" class="form-input" value="info@ejemplo.com" placeholder="Input con diseño global"
+                  readonly>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         BANNER CTA (LLAMADO A LA ACCIÓN)
+         ====================================================================== -->
+    <div class="container">
+      <div class="cta-banner">
+        <div>
+          <div class="badge cta-badge">COLABORACIÓN ABIERTA</div>
+          <h2 class="cta-title">¡Hablemos de tu próximo proyecto!</h2>
+          <p class="cta-desc">
+            ¿Tienes un reto técnico o una idea innovadora? Estoy disponible para contratos de consultoría, desarrollo
+            frontend y proyectos de alto impacto.
+          </p>
+        </div>
+        <div>
+          <a href="#contacto" class="btn btn-secondary">
+            <span>Agendar llamada de 15 min</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         06. CONTACTO (#contacto)
+         ====================================================================== -->
+    <section id="contacto" class="section">
+      <div class="container">
+
+        <header class="section-header">
+          <span class="section-tag">05 / CONTACTO</span>
+          <h2 class="section-title">¿Tienes una idea en mente?</h2>
+          <p class="section-subtitle">
+            Envíame un mensaje y te responderé en un plazo máximo de 24 horas laborables.
+          </p>
+        </header>
+
+        <div class="contact-grid">
+
+          <!-- Columna Formulario -->
+          <div class="contact-card">
+            <!-- Banner de éxito de validación -->
+            <div id="form-success-banner" class="form-success-banner" role="alert" aria-live="polite"></div>
+
+            <form id="contact-form" novalidate>
+              <div class="form-group">
+                <label for="nombre" class="form-label">Nombre Completo *</label>
+                <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Ej. Carlos Mendoza"
+                  required autocomplete="name">
+                <div id="error-nombre" class="form-error" role="alert"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Correo Electrónico *</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="carlos@empresa.com" required
+                  autocomplete="email">
+                <div id="error-email" class="form-error" role="alert"></div>
+              </div>
+
+              <div class="form-group">
+                <label for="mensaje" class="form-label">Mensaje o Propuesta de Proyecto *</label>
+                <textarea id="mensaje" name="mensaje" rows="5" class="form-textarea"
+                  placeholder="Cuéntame sobre los objetivos, plazos y requerimientos de tu proyecto..."
+                  required></textarea>
+                <div id="error-mensaje" class="form-error" role="alert"></div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <span>Enviar Mensaje</span>
+                <span aria-hidden="true">↗</span>
+              </button>
+            </form>
+          </div>
+
+          <!-- Columna Canales Directos -->
+          <div class="contact-channels">
+
+            <a href="https://github.com/JLP2323" target="_blank" rel="noopener noreferrer"
+              class="contact-channel-item">
+              <div class="channel-info">
+                <div class="channel-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                  </svg>
+                </div>
+                <div>
+                  <div class="channel-name">GitHub</div>
+                  <div class="channel-val">@JLP2323</div>
+                </div>
+              </div>
+              <div class="channel-arrow" aria-hidden="true">↗</div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/gleyder-julissa-lescano-paredes-1083573b5/" target="_blank" rel="noopener noreferrer"
+              class="contact-channel-item">
+              <div class="channel-info">
+                <div class="channel-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <div class="channel-name">LinkedIn</div>
+                  <div class="channel-val">linkedin.com/in/julissa-lescano-paredes</div>
+                </div>
+              </div>
+              <div class="channel-arrow" aria-hidden="true">↗</div>
+            </a>
+
+            <a href="mailto:alex.rivera@ingenieria.dev" class="contact-channel-item">
+              <div class="channel-info">
+                <div class="channel-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div>
+                  <div class="channel-name">Correo Directo</div>
+                  <div class="channel-val">julissalescano06@gmail.com</div>
+                </div>
+              </div>
+              <div class="channel-arrow" aria-hidden="true">↗</div>
+            </a>
+
+            <div class="contact-channel-item">
+              <div class="channel-info">
+                <div class="channel-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <div class="channel-name">Ubicación & Disponibilidad</div>
+                  <div class="channel-val">Milagro, Ecuador +593 (Disponible Remoto)</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER & VOLVER ARRIBA
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-copy">
+        <strong>Julissa lescano</strong> — Software Engineer.<br>
+        © 2026. Código artesanal en HTML5, CSS3 y JS Vanilla, sin dependencias externas.
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/JLP2323" target="_blank" rel="noopener noreferrer" class="btn-icon"
+          aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/gleyder-julissa-lescano-paredes-1083573b5/" target="_blank" rel="noopener noreferrer" class="btn-icon"
+          aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botón Volver Arriba Flotante -->
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Volver arriba">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ========================================================================
+       MODAL DE DETALLE DE PROYECTOS ACCESIBLE
+       ======================================================================== -->
+  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true"
+    aria-labelledby="modal-project-title">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div>
+          <h3 id="modal-project-title" class="modal-title">Título del Proyecto</h3>
+          <p id="modal-project-subtitle" class="stat-desc">Subtítulo descriptivo</p>
+        </div>
+        <button type="button" id="modal-close-btn" class="modal-close-btn" aria-label="Cerrar modal de detalle">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-image">
+          <img id="modal-project-image" src="assets/nexus-dashboard.jpg" alt="Captura ampliada del proyecto">
+        </div>
+
+        <div id="modal-project-tags" class="project-tags-row"></div>
+
+        <div class="modal-detail-block">
+          <h4 class="modal-block-title">Problema que resuelve</h4>
+          <p id="modal-project-problem" class="modal-block-text"></p>
+        </div>
+
+        <div class="modal-detail-block">
+          <h4 class="modal-block-title">Solución técnica implementada</h4>
+          <p id="modal-project-solution" class="modal-block-text"></p>
+        </div>
+
+        <div class="modal-detail-block">
+          <h4 class="modal-block-title">Métricas de impacto</h4>
+          <div id="modal-project-metrics" class="case-study-metrics"></div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a id="modal-github-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+            </path>
+          </svg>
+          <span>Ver Repositorio</span>
+        </a>
+        <a id="modal-demo-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+          <span>Abrir Demo en Vivo</span>
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script Principal Vanilla JS -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
