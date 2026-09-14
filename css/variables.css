@@ -1,0 +1,30 @@
+:root,
+[data-theme="dark"] {
+  --color-background: #0a0a0a;
+  --color-surface: #171717;
+  --color-primary: #22d3ee;
+  --color-secondary: #67e8f9;
+  --color-text: #e5e5e5;
+  --color-text-muted: #a3a3a3;
+
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --shadow-card: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+[data-theme="light"] {
+  --color-background: #fafafa;
+  --color-surface: #ffffff;
+  --color-primary: #0891b2;
+  --color-secondary: #22d3ee;
+  --color-text: #171717;
+  --color-text-muted: #525252;
+}
