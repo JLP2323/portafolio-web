@@ -62,7 +62,7 @@ p, label, input, textarea, select, button {
 }
 
 code, pre, kbd, samp {
-  font-family: var(--font-mono);
+  font-family: var(--font-accent);
 }
 
 /* Fondo ambiental sutil con degradados radiales */
@@ -136,7 +136,7 @@ ul, ol {
 }
 
 .section-tag {
-  font-family: var(--font-mono);
+  font-family: var(--font-accent);
   display: inline-block;
   
   font-size: 0.8125rem;
@@ -166,10 +166,8 @@ ul, ol {
 
 /* Tipografía de Acento */
 .font-accent {
-  font-family: var(--font-heading);
-  font-style: italic;
+  font-family: var(--font-accent);
   font-weight: 500;
-  color: var(--color-secondary);
 }
 
 /* --------------------------------------------------------------------------
@@ -265,7 +263,7 @@ ul, ol {
 
 /* BADGES & CHIPS */
 .badge {
-  font-family: var(--font-mono);
+  font-family: var(--font-accent);
   display: inline-flex;
   align-items: center;
   gap: var(--space-xs);
@@ -305,7 +303,7 @@ ul, ol {
 }
 
 .badge-tech {
-  font-family: var(--font-mono);
+  font-family: var(--font-accent);
   
   font-size: 0.7rem;
   font-weight: 700;
@@ -639,7 +637,7 @@ ul, ol {
   border: 1px solid color-mix(in srgb, var(--color-primary) 40%, transparent);
   padding: 0.4rem 0.8rem;
   border-radius: var(--radius-full);
-  font-family: var(--font-mono);
+  font-family: var(--font-accent);
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--color-text);
@@ -706,7 +704,7 @@ ul, ol {
 }
 
 .stat-value {
-  font-family: var(--font-mono);
+  font-family: var(--font-accent);
   
   font-size: clamp(2rem, 3.5vw, 2.75rem);
   font-weight: 800;
@@ -908,7 +906,7 @@ ul, ol {
 }
 
 .process-number {
-  font-family: var(--font-mono);
+  font-family: var(--font-accent);
   width: 36px;
   height: 36px;
   border-radius: var(--radius-xs);
@@ -1279,7 +1277,7 @@ ul, ol {
 }
 
 .case-metric-number {
-  font-family: var(--font-mono);
+  font-family: var(--font-accent);
   
   font-size: 1.35rem;
   font-weight: 800;
@@ -1351,7 +1349,7 @@ ul, ol {
 }
 
 .swatch-name {
-  font-family: var(--font-mono);
+  font-family: var(--font-accent);
   
   font-size: 0.75rem;
   font-weight: 700;
@@ -1398,7 +1396,7 @@ ul, ol {
 }
 
 .spacing-label {
-  font-family: var(--font-mono);
+  font-family: var(--font-accent);
   width: 90px;
   
   font-size: 0.8125rem;

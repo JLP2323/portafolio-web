@@ -7,9 +7,9 @@
   --color-text: #e5e5e5;
   --color-text-muted: #a3a3a3;
 
-  --font-heading: 'Fragment Mono', monospace; 
+  --font-heading: 'IBM Plex Sans Condensed', sans-serif;
   --font-body: 'Public Sans', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
+  --font-accent: 'IBM Plex Mono', monospace;
 
   --space-sm: 0.5rem;
   --space-md: 1rem;
