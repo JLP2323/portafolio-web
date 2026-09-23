@@ -789,7 +789,7 @@ ul, ol {
 
 .about-text {
   font-size: 0.9375rem;
-  color: var(--color-text-muted);
+  color: var(--color-text-muted); 
   line-height: 1.7;
 }
 
