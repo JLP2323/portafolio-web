@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    PORTAFOLIO ALEX RIVERA - CSS3 VANILLA & DESIGN SYSTEM
    Separación estricta de presentación. Cero librerías externas.
    ========================================================================== */
@@ -1202,65 +1202,6 @@ ul, ol {
   transform: translateY(-2px);
 }
 
-/* CASO DE ESTUDIO DESTACADO */
-.case-study-card {
-  background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-surface) 100%);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: var(--space-xl);
-  box-shadow: var(--shadow-card);
-}
-
-.case-study-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: var(--space-md);
-  margin-bottom: var(--space-lg);
-  padding-bottom: var(--space-md);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.case-study-title {
-  font-family: var(--font-heading);
-  
-  font-size: clamp(1.5rem, 2.8vw, 2rem);
-  font-weight: 800;
-  color: var(--color-text);
-  margin-top: var(--space-xs);
-}
-
-.case-study-buttons {
-  display: flex;
-  gap: var(--space-xs);
-}
-
-.case-study-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: var(--space-xl);
-  align-items: center;
-}
-
-.case-study-section-title {
-  font-family: var(--font-heading);
-  
-  font-size: 0.9375rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-secondary);
-  margin-bottom: var(--space-2xs);
-}
-
-.case-study-text {
-  font-size: 0.9375rem;
-  color: var(--color-text-muted);
-  line-height: 1.65;
-  margin-bottom: var(--space-md);
-}
-
 .case-study-metrics {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1287,13 +1228,6 @@ ul, ol {
 .case-metric-label {
   font-size: 0.75rem;
   color: var(--color-text-muted);
-}
-
-.case-study-preview {
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-card);
 }
 
 /* --------------------------------------------------------------------------
@@ -1790,10 +1724,6 @@ ul, ol {
 
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .case-study-grid {
-    grid-template-columns: 1fr;
   }
 
   .ds-grid {
