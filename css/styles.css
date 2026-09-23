@@ -6,7 +6,9 @@
 /* --------------------------------------------------------------------------
    03. RESET & ESTILOS BASE
    -------------------------------------------------------------------------- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -53,15 +55,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
 }
 
-p, label, input, textarea, select, button {
+p,
+label,
+input,
+textarea,
+select,
+button {
   font-family: var(--font-body);
 }
 
-code, pre, kbd, samp {
+code,
+pre,
+kbd,
+samp {
   font-family: var(--font-accent);
 }
 
@@ -83,7 +98,9 @@ body::before {
   background: radial-gradient(circle, color-mix(in srgb, var(--color-primary) 8%, transparent) 0%, transparent 70%);
 }
 
-img, picture, svg {
+img,
+picture,
+svg {
   display: block;
   max-width: 100%;
 }
@@ -94,7 +111,9 @@ a {
   transition: color var(--transition-fast);
 }
 
-button, input, textarea {
+button,
+input,
+textarea {
   font: inherit;
   color: inherit;
 }
@@ -105,7 +124,8 @@ button {
   background: none;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -138,7 +158,7 @@ ul, ol {
 .section-tag {
   font-family: var(--font-accent);
   display: inline-block;
-  
+
   font-size: 0.8125rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -149,7 +169,7 @@ ul, ol {
 
 .section-title {
   font-family: var(--font-heading);
-  
+
   font-size: clamp(2rem, 3.8vw, 3rem);
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -182,7 +202,7 @@ ul, ol {
   justify-content: center;
   gap: var(--space-xs);
   padding: 0.8rem 1.6rem;
-  
+
   font-size: 0.9375rem;
   font-weight: 600;
   border-radius: var(--radius-full);
@@ -268,7 +288,7 @@ ul, ol {
   align-items: center;
   gap: var(--space-xs);
   padding: 0.35rem 0.85rem;
-  
+
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -298,13 +318,22 @@ ul, ol {
 }
 
 @keyframes pulse-dot {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.8); }
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
 }
 
 .badge-tech {
   font-family: var(--font-accent);
-  
+
   font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -343,7 +372,7 @@ ul, ol {
 .form-label {
   font-family: var(--font-body);
   display: block;
-  
+
   font-size: 0.8125rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -433,7 +462,7 @@ ul, ol {
   display: flex;
   align-items: center;
   gap: var(--space-xs);
-  
+
   font-size: 1.125rem;
   font-weight: 800;
   letter-spacing: -0.02em;
@@ -466,7 +495,7 @@ ul, ol {
 .nav-link {
   font-family: var(--font-body);
   padding: 0.45rem 0.95rem;
-  
+
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--color-text-muted);
@@ -555,7 +584,7 @@ ul, ol {
 
 .hero-title {
   font-family: var(--font-heading);
-  
+
   font-size: clamp(2.5rem, 5vw, 4.25rem);
   font-weight: 800;
   line-height: 1.08;
@@ -672,8 +701,15 @@ ul, ol {
 }
 
 @keyframes float-anim {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -705,7 +741,7 @@ ul, ol {
 
 .stat-value {
   font-family: var(--font-accent);
-  
+
   font-size: clamp(2rem, 3.5vw, 2.75rem);
   font-weight: 800;
   line-height: 1;
@@ -724,7 +760,7 @@ ul, ol {
 
 .stat-title {
   font-family: var(--font-body);
-  
+
   font-size: 0.9375rem;
   font-weight: 700;
   color: var(--color-text);
@@ -773,7 +809,7 @@ ul, ol {
 
 .about-profile-title {
   font-family: var(--font-heading);
-  
+
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--color-text);
@@ -789,7 +825,7 @@ ul, ol {
 
 .about-text {
   font-size: 0.9375rem;
-  color: var(--color-text-muted); 
+  color: var(--color-text-muted);
   line-height: 1.7;
 }
 
@@ -804,7 +840,7 @@ ul, ol {
 
 .aside-title {
   font-family: var(--font-heading);
-  
+
   font-size: 0.875rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -824,7 +860,7 @@ ul, ol {
 
 .education-degree {
   font-family: var(--font-heading);
-  
+
   font-size: 1rem;
   font-weight: 700;
   color: var(--color-text);
@@ -877,7 +913,7 @@ ul, ol {
 
 .process-title {
   font-family: var(--font-heading);
-  
+
   font-size: 1.35rem;
   font-weight: 700;
 }
@@ -912,7 +948,7 @@ ul, ol {
   border-radius: var(--radius-xs);
   background: color-mix(in srgb, var(--color-primary) 15%, transparent);
   color: var(--color-secondary);
-  
+
   font-size: 0.875rem;
   font-weight: 800;
   display: flex;
@@ -922,7 +958,7 @@ ul, ol {
 
 .process-card-title {
   font-family: var(--font-heading);
-  
+
   font-size: 1rem;
   font-weight: 700;
   color: var(--color-text);
@@ -974,7 +1010,7 @@ ul, ol {
 
 .skills-category-title {
   font-family: var(--font-heading);
-  
+
   font-size: 1.125rem;
   font-weight: 700;
   display: flex;
@@ -1004,7 +1040,7 @@ ul, ol {
 
 .skill-name {
   font-family: var(--font-body);
-  
+
   font-weight: 600;
   color: var(--color-text);
 }
@@ -1047,7 +1083,7 @@ ul, ol {
 .filter-btn {
   font-family: var(--font-body);
   padding: 0.45rem 1.1rem;
-  
+
   font-size: 0.8125rem;
   font-weight: 600;
   border-radius: var(--radius-full);
@@ -1153,7 +1189,7 @@ ul, ol {
 
 .project-title {
   font-family: var(--font-heading);
-  
+
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--color-text);
@@ -1219,7 +1255,7 @@ ul, ol {
 
 .case-metric-number {
   font-family: var(--font-accent);
-  
+
   font-size: 1.35rem;
   font-weight: 800;
   color: var(--color-secondary);
@@ -1249,7 +1285,7 @@ ul, ol {
 
 .ds-card-title {
   font-family: var(--font-heading);
-  
+
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--color-text);
@@ -1284,7 +1320,7 @@ ul, ol {
 
 .swatch-name {
   font-family: var(--font-accent);
-  
+
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--color-text);
@@ -1332,7 +1368,7 @@ ul, ol {
 .spacing-label {
   font-family: var(--font-accent);
   width: 90px;
-  
+
   font-size: 0.8125rem;
   color: var(--color-text-muted);
 }
@@ -1372,7 +1408,7 @@ ul, ol {
 
 .cta-title {
   font-family: var(--font-heading);
-  
+
   font-size: clamp(1.6rem, 3vw, 2.25rem);
   font-weight: 800;
   line-height: 1.2;
@@ -1457,7 +1493,7 @@ ul, ol {
 
 .channel-name {
   font-family: var(--font-heading);
-  
+
   font-size: 0.9375rem;
   font-weight: 700;
   color: var(--color-text);
@@ -1614,7 +1650,7 @@ ul, ol {
 
 .modal-title {
   font-family: var(--font-heading);
-  
+
   font-size: 1.5rem;
   font-weight: 800;
   color: var(--color-text);
@@ -1664,7 +1700,7 @@ ul, ol {
 
 .modal-block-title {
   font-family: var(--font-heading);
-  
+
   font-size: 0.875rem;
   font-weight: 700;
   text-transform: uppercase;
