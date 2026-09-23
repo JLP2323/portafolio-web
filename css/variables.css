@@ -7,8 +7,8 @@
   --color-text: #e5e5e5;
   --color-text-muted: #a3a3a3;
 
-  --font-heading: 'Space Grotesk', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Fragment Mono', monospace; 
+  --font-body: 'Public Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   --space-sm: 0.5rem;
