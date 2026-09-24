@@ -142,13 +142,20 @@ ol {
 }
 
 .section {
-  padding-block: var(--space-2xl);
-  border-bottom: 1px solid var(--color-border);
+  padding-block: var(--space-section) 0;
   position: relative;
 }
 
 .section:last-of-type {
-  border-bottom: none;
+  padding-bottom: var(--space-section);
+}
+
+main > .section:nth-of-type(odd) {
+  background: var(--color-background);
+}
+
+main > .section:nth-of-type(even) {
+  background: var(--color-surface);
 }
 
 .section-header {
@@ -567,8 +574,7 @@ ol {
    07. HERO SECTION (#inicio)
    -------------------------------------------------------------------------- */
 .hero {
-  padding-top: calc(var(--space-2xl) + 1rem);
-  padding-bottom: var(--space-2xl);
+  padding-top: calc(var(--space-section) + 1rem);
   overflow: hidden;
 }
 
@@ -721,7 +727,6 @@ ol {
    -------------------------------------------------------------------------- */
 .stats-section {
   padding-block: var(--space-lg);
-  border-bottom: 1px solid var(--color-border);
 }
 
 .stats-grid {
@@ -1118,7 +1123,6 @@ ol {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
-  margin-bottom: var(--space-2xl);
 }
 
 /* Project Card (semantic <article>) */
