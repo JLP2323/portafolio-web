@@ -1435,6 +1435,7 @@ main>.section:nth-of-type(even) {
 .project-icon-links {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 8px;
 }
 
@@ -1946,7 +1947,104 @@ main>.section:nth-of-type(even) {
 }
 
 /* --------------------------------------------------------------------------
-   17. MEDIA QUERIES RESPONSIVE (Desktop > 1024, Tablet 768-1024, Móvil < 768)
+   17. SISTEMA DE NOTIFICACIONES TOAST
+   -------------------------------------------------------------------------- */
+.toast-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1100;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  pointer-events: none;
+}
+
+.toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  background: var(--color-surface);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  box-shadow: var(--shadow-card-hover);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-text);
+  min-width: 300px;
+  max-width: 420px;
+  line-height: 1.5;
+  /* Animación de entrada */
+  animation: toast-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
+}
+
+.toast.is-hiding {
+  animation: toast-out 0.35s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+.toast-dot {
+  width: 10px;
+  height: 10px;
+  min-width: 10px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--color-primary) 60%, transparent);
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.toast-message {
+  flex: 1;
+}
+
+[data-theme="light"] .toast {
+  background: var(--color-surface);
+  border-color: var(--color-primary);
+  color: var(--color-text);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--color-primary) 18%, transparent);
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes toast-out {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px) scale(0.97);
+  }
+}
+
+/* Responsive: en móvil el toast ocupa casi todo el ancho */
+@media (max-width: 480px) {
+  .toast-container {
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+  }
+  .toast {
+    min-width: unset;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   18. MEDIA QUERIES RESPONSIVE (Desktop > 1024, Tablet 768-1024, Móvil < 768)
    -------------------------------------------------------------------------- */
 
 /* TABLET (768px - 1024px) */

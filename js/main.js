@@ -217,7 +217,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalSolution = document.getElementById('modal-project-solution');
   const modalMetrics = document.getElementById('modal-project-metrics');
   const modalGithubLink = document.getElementById('modal-github-link');
-  const modalDemoLink = document.getElementById('modal-demo-link');
 
   function openProjectModal(projectId) {
     const data = PROJECTS_DATA[projectId];
@@ -230,7 +229,6 @@ document.addEventListener('DOMContentLoaded', () => {
     modalProblem.textContent = data.problem;
     modalSolution.textContent = data.solution;
     modalGithubLink.href = data.githubUrl;
-    modalDemoLink.href = data.demoUrl;
 
     // Render tags
     modalTags.innerHTML = data.tags
@@ -278,6 +276,79 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.target === modalOverlay) {
         closeProjectModal();
       }
+    });
+  }
+
+  // --------------------------------------------------------------------------
+  // 06b. SISTEMA DE NOTIFICACIONES TOAST
+  // --------------------------------------------------------------------------
+  const toastContainer = document.getElementById('toast-container');
+
+  /**
+   * Muestra un toast notification.
+   * @param {string} message - Texto del mensaje.
+   * @param {number} [duration=4000] - Duración visible en ms antes de ocultarse.
+   */
+  function showToast(message, duration = 4000) {
+    if (!toastContainer) return;
+
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.setAttribute('role', 'status');
+    toast.innerHTML = `
+      <span class="toast-dot" aria-hidden="true"></span>
+      <span class="toast-message">${message}</span>
+    `;
+
+    toastContainer.appendChild(toast);
+
+    // Auto-ocultar con animación suave tras `duration` ms
+    const hideTimer = setTimeout(() => {
+      toast.classList.add('is-hiding');
+      toast.addEventListener('animationend', () => toast.remove(), { once: true });
+    }, duration);
+
+    // Permitir cerrar con clic
+    toast.addEventListener('click', () => {
+      clearTimeout(hideTimer);
+      toast.classList.add('is-hiding');
+      toast.addEventListener('animationend', () => toast.remove(), { once: true });
+    }, { once: true });
+  }
+
+  // --------------------------------------------------------------------------
+  // 06c. BOTÓN "SOLICITAR DEMO"
+  // --------------------------------------------------------------------------
+  const btnRequestDemo = document.getElementById('btn-request-demo');
+
+  if (btnRequestDemo) {
+    btnRequestDemo.addEventListener('click', () => {
+      // 1. Cerrar el modal suavemente
+      closeProjectModal();
+
+      // 2. Disparar toast después de que el modal haya iniciado su cierre
+      setTimeout(() => {
+        showToast(
+          '✓ Solicitud enviada. Te contactaré en breve con las credenciales y acceso al demo.'
+        );
+      }, 180);
+
+      // 3. Scroll suave a la sección #contacto y preseleccionar chip "Proyecto Web"
+      setTimeout(() => {
+        const contactSection = document.getElementById('contacto');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Preseleccionar el chip de "Proyecto Web" en el formulario de contacto
+        const proyectoWebChip = document.querySelector('.topic-chip[data-topic="Proyecto Web"]');
+        if (proyectoWebChip) {
+          const topicAsunto = document.getElementById('topic-asunto');
+          document.querySelectorAll('.topic-chip').forEach(c => c.classList.remove('is-active'));
+          proyectoWebChip.classList.add('is-active');
+          if (topicAsunto) topicAsunto.value = 'Proyecto Web';
+        }
+      }, 400);
     });
   }
 
