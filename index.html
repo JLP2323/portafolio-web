@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es" data-theme="dark">
 
 <head>
@@ -13,8 +13,6 @@
     rel="stylesheet">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/styles.css">
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 </head>
 
 <body id="top">
@@ -319,7 +317,6 @@
           <div class="skills-category-card">
             <div class="skills-category-header">
               <h3 class="skills-category-title">
-                <span aria-hidden="true">🎨</span>
                 Frontend & Creative
               </h3>
               <span class="badge badge-tech">8 Techs</span>
@@ -353,7 +350,6 @@
           <div class="skills-category-card">
             <div class="skills-category-header">
               <h3 class="skills-category-title">
-                <span aria-hidden="true">⚙️</span>
                 Backend & API
               </h3>
               <span class="badge badge-tech">6 Techs</span>
@@ -387,7 +383,6 @@
           <div class="skills-category-card">
             <div class="skills-category-header">
               <h3 class="skills-category-title">
-                <span aria-hidden="true">☁️</span>
                 Cloud & DevOps
               </h3>
               <span class="badge badge-tech">7 Techs</span>
@@ -795,33 +790,54 @@
             <!-- Banner de éxito de validación -->
             <div id="form-success-banner" class="form-success-banner" role="alert" aria-live="polite"></div>
 
+            <!-- Chips de Temática -->
+            <div class="topic-chips-wrapper" style="margin-bottom: var(--space-md);">
+              <span class="topic-chips-label">¿Sobre qué me escribes?</span>
+              <div class="topic-chips" role="group" aria-label="Selección de tema">
+                <button type="button" class="topic-chip" data-topic="Proyecto Web"> Proyecto Web</button>
+                <button type="button" class="topic-chip" data-topic="Frontend UI"> Frontend UI</button>
+                <button type="button" class="topic-chip" data-topic="Consulta General"> Consulta General</button>
+              </div>
+            </div> 
+
             <form id="contact-form" novalidate>
+              <input type="hidden" id="topic-asunto" name="asunto" value="">
               <div class="form-group">
-                <label for="nombre" class="form-label">Nombre Completo *</label>
-                <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Ej. Carlos Mendoza"
+                <label for="nombre" class="form-label">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align: middle; margin-right: 5px; opacity: 0.65;"><circle cx="12" cy="8" r="4"></circle><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"></path></svg>Nombre Completo *
+                </label>
+                <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Ej. Julissa Lescano"
                   required autocomplete="name">
                 <div id="error-nombre" class="form-error" role="alert"></div>
               </div>
 
               <div class="form-group">
-                <label for="email" class="form-label">Correo Electrónico *</label>
-                <input type="email" id="email" name="email" class="form-input" placeholder="carlos@empresa.com" required
+                <label for="email" class="form-label">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align: middle; margin-right: 5px; opacity: 0.65;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>Correo Electrónico *
+                </label>
+                <input type="email" id="email" name="email" class="form-input" placeholder=" julissalescano@gmail.com" required 
                   autocomplete="email">
                 <div id="error-email" class="form-error" role="alert"></div>
               </div>
-
+ 
               <div class="form-group">
-                <label for="mensaje" class="form-label">Mensaje o Propuesta de Proyecto *</label>
+                <label for="mensaje" class="form-label">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align: middle; margin-right: 5px; opacity: 0.65;"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>Mensaje o Propuesta de Proyecto *
+                </label>
                 <textarea id="mensaje" name="mensaje" rows="5" class="form-textarea"
                   placeholder="Cuéntame sobre los objetivos, plazos y requerimientos de tu proyecto..."
-                  required></textarea>
+                  required maxlength="500"></textarea>
                 <div id="error-mensaje" class="form-error" role="alert"></div>
+                <div id="char-counter" class="char-counter" aria-live="polite" aria-atomic="true">0 / 500</div>
               </div>
 
-              <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <button type="submit" id="submit-btn" class="btn btn-primary" style="width: 100%;">
                 <span>Enviar Mensaje</span>
                 <span aria-hidden="true">↗</span>
               </button>
+              <p class="form-trust-text">
+               Sin spam ni divulgación. Respuesta en menos de 24 horas laborables.
+              </p>
             </form>
           </div>
 
@@ -865,7 +881,7 @@
               <div class="channel-arrow" aria-hidden="true">↗</div>
             </a>
 
-            <a href="mailto:alex.rivera@ingenieria.dev" class="contact-channel-item">
+            <a href="mailto:julissalescano06@gmail.com" class="contact-channel-item" target="_blank" rel="noopener noreferrer" aria-label="Enviar correo directo a julissalescano06@gmail.com">
               <div class="channel-info">
                 <div class="channel-icon" aria-hidden="true">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -893,7 +909,11 @@
                 </div>
                 <div>
                   <div class="channel-name">Ubicación & Disponibilidad</div>
-                  <div class="channel-val">Milagro, Ecuador +593 (Disponible Remoto)</div>
+                  <div class="channel-val" style="margin-top: 4px;">Milagro, Ecuador +593</div>
+                  <div class="availability-indicator" style="margin-top: 6px;">
+                    <span class="availability-dot" aria-hidden="true"></span>
+                    <span class="availability-text">Disponible Remoto / Tiempo Completo</span>
+                  </div>
                 </div>
               </div>
             </div>

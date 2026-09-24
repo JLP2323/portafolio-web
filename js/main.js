@@ -325,11 +325,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Validación interactiva en tiempo real al escribir
+  // Validación interactiva en tiempo real con clases is-valid / is-invalid
   if (nombreInput) {
     nombreInput.addEventListener('input', () => {
-      if (nombreInput.value.trim().length >= 2) {
+      const val = nombreInput.value.trim();
+      if (val.length >= 2) {
         clearError(nombreInput, 'error-nombre');
+        nombreInput.classList.add('is-valid');
+      } else {
+        nombreInput.classList.remove('is-valid');
       }
     });
   }
@@ -338,17 +342,57 @@ document.addEventListener('DOMContentLoaded', () => {
     emailInput.addEventListener('input', () => {
       if (validateEmail(emailInput.value.trim())) {
         clearError(emailInput, 'error-email');
+        emailInput.classList.add('is-valid');
+      } else {
+        emailInput.classList.remove('is-valid');
       }
     });
   }
 
-  if (mensajeInput) {
+  // --------------------------------------------------------------------------
+  // 07b. CONTADOR DE CARACTERES DEL TEXTAREA
+  // --------------------------------------------------------------------------
+  const charCounter = document.getElementById('char-counter');
+  const CHAR_LIMIT = 500;
+
+  if (mensajeInput && charCounter) {
     mensajeInput.addEventListener('input', () => {
+      const len = mensajeInput.value.length;
+      charCounter.textContent = `${len} / ${CHAR_LIMIT}`;
+      charCounter.classList.remove('is-near-limit', 'is-at-limit');
+      if (len >= CHAR_LIMIT) {
+        charCounter.classList.add('is-at-limit');
+      } else if (len >= CHAR_LIMIT * 0.8) {
+        charCounter.classList.add('is-near-limit');
+      }
       if (mensajeInput.value.trim().length >= 10) {
         clearError(mensajeInput, 'error-mensaje');
+        mensajeInput.classList.add('is-valid');
+      } else {
+        mensajeInput.classList.remove('is-valid');
       }
     });
   }
+
+  // --------------------------------------------------------------------------
+  // 07c. CHIPS DE TEMÁTICA
+  // --------------------------------------------------------------------------
+  const topicChips = document.querySelectorAll('.topic-chip');
+  const topicAsuntoInput = document.getElementById('topic-asunto');
+
+  topicChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      const isAlreadyActive = chip.classList.contains('is-active');
+      topicChips.forEach(c => c.classList.remove('is-active'));
+      if (!isAlreadyActive) {
+        chip.classList.add('is-active');
+        if (topicAsuntoInput) topicAsuntoInput.value = chip.getAttribute('data-topic') || '';
+      } else {
+        if (topicAsuntoInput) topicAsuntoInput.value = '';
+      }
+    });
+  });
+
 
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -365,6 +409,7 @@ document.addEventListener('DOMContentLoaded', () => {
         isValid = false;
       } else {
         clearError(nombreInput, 'error-nombre');
+        nombreInput.classList.add('is-valid');
       }
 
       // Validar Email
@@ -377,6 +422,7 @@ document.addEventListener('DOMContentLoaded', () => {
         isValid = false;
       } else {
         clearError(emailInput, 'error-email');
+        emailInput.classList.add('is-valid');
       }
 
       // Validar Mensaje
@@ -389,11 +435,12 @@ document.addEventListener('DOMContentLoaded', () => {
         isValid = false;
       } else {
         clearError(mensajeInput, 'error-mensaje');
+        mensajeInput.classList.add('is-valid');
       }
 
       if (isValid) {
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitBtn ? submitBtn.innerHTML : 'Enviar';
+        const submitBtn = document.getElementById('submit-btn') || contactForm.querySelector('button[type="submit"]');
+        const originalHTML = submitBtn ? submitBtn.innerHTML : '';
 
         if (submitBtn) {
           submitBtn.disabled = true;
@@ -402,7 +449,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
               <path d="M12 2a10 10 0 0 1 10 10"></path>
             </svg>
-            Enviando mensaje...
+            Enviando...
           `;
         }
 
@@ -410,7 +457,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           if (submitBtn) {
             submitBtn.disabled = false;
-            submitBtn.innerHTML = originalText;
+            submitBtn.innerHTML = originalHTML;
           }
 
           if (successBanner) {
@@ -422,7 +469,17 @@ document.addEventListener('DOMContentLoaded', () => {
             successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           }
 
+          // Resetear formulario y estados visuales
           contactForm.reset();
+          if (charCounter) {
+            charCounter.textContent = `0 / ${CHAR_LIMIT}`;
+            charCounter.classList.remove('is-near-limit', 'is-at-limit');
+          }
+          [nombreInput, emailInput, mensajeInput].forEach(el => {
+            if (el) el.classList.remove('is-valid', 'is-invalid');
+          });
+          topicChips.forEach(c => c.classList.remove('is-active'));
+          if (topicAsuntoInput) topicAsuntoInput.value = '';
 
           setTimeout(() => {
             successBanner?.classList.remove('is-visible');
