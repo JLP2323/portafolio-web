@@ -1430,6 +1430,13 @@ main>.section:nth-of-type(even) {
   padding-top: var(--space-sm);
   border-top: 1px solid var(--color-border);
   margin-top: auto;
+  gap: var(--space-xs);
+}
+
+/* Cuando solo hay el botón "Ver más" sin iconos, lo alineamos a la izquierda */
+.project-actions:only-child,
+.project-actions > .btn:only-child {
+  margin-right: auto;
 }
 
 .project-icon-links {
@@ -1437,6 +1444,12 @@ main>.section:nth-of-type(even) {
   align-items: center;
   justify-content: flex-end;
   gap: 8px;
+  flex-shrink: 0;
+}
+
+/* Si project-icon-links está vacío (o no existe), project-actions no deja hueco */
+.project-icon-links:empty {
+  display: none;
 }
 
 .project-icon-link {

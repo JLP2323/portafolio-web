@@ -13,34 +13,34 @@ document.addEventListener('DOMContentLoaded', () => {
   // --------------------------------------------------------------------------
   const PROJECTS_DATA = {
     'nexus-dashboard': {
-      title: 'Nexus Dashboard',
-      subtitle: 'Plataforma Analítica SaaS de Telemetría en Tiempo Real',
-      image: 'assets/nexus-dashboard.jpg',
-      tags: ['React 18', 'TypeScript', 'Tailwind', 'WebSockets', 'D3.js'],
-      problem: 'Las plataformas tradicionales de analítica empresarial presentan retardos de actualización superiores a 4 segundos y saturan más del 70% de CPU del cliente al renderizar miles de eventos y métricas concurrentes.',
-      solution: 'Se implementó una arquitectura reactiva con React 18 y Server-Sent Events/WebSockets con serialización de buffers binarios. La capa de gráficos se renderiza con aceleración por hardware WebGL/Pixi.js, manteniendo 60 FPS estables y latencias menores a 100ms.',
+      title: 'GUIOSAD — Evaluación SWOT & FLOSS',
+      subtitle: 'Sistema Inteligente Transaccional para Auditoría y Adopción de Software Libre',
+      image: 'assets/Evaluacion_SOFT.jpeg',
+      tags: ['Node.js', 'TypeScript', 'PostgreSQL', 'Google Gemini IA', 'REST API', 'JWT'],
+      problem: 'Las evaluaciones de adopción de software libre se ejecutaban de forma empírica o mediante hojas de cálculo dispersas, careciendo de persistencia de datos centralizada, trazabilidad histórica, soporte multiusuario y catálogos dinámicos.', 
+      solution: 'Desarrollo de una arquitectura en capas (Routes, Controllers, Services, Repositories) con PostgreSQL y transacciones ACID. Automatiza el cálculo de Importancia Relativa (IR), Ponderación Media (PM) y clasificación FODA en 6 pasos, integrando Gemini IA para sugerir factores académicos respaldados.',
       metrics: [
-        { label: 'Lighthouse Score', value: '98/100' },
-        { label: 'Time to Interactive', value: '1.1s' },
-        { label: 'Eventos Concurrente', value: '25,000 evt/s' }
+        { label: 'Tablas Relacionales', value: '13' },
+        { label: 'Historias de Usuario', value: '23' },
+        { label: 'Automatización FODA', value: '100%' }
       ],
-      githubUrl: 'https://github.com/alexrivera-dev/nexus-dashboard',
-      demoUrl: 'https://nexus-dashboard-demo.dev'
+      githubUrl: 'https://github.com/JavicSoftCode-01/swot_software_evaluation.git', 
+      demoUrl: '#contacto'
     },
     'aura-studio': {
-      title: 'Aura Studio',
-      subtitle: 'Laboratorio de Experimentación 3D y Shaders Procedurales',
-      image: 'assets/aura-studio.jpg',
-      tags: ['Three.js', 'WebGL', 'GLSL Shaders', 'Vite', 'Audio Reactivo'],
-      problem: 'La creación de experiencias 3D fluidas e interactivas en dispositivos móviles suele verse penalizada por un alto consumo de memoria GPU y problemas de sobrecalentamiento.',
-      solution: 'Desarrollo de shaders GLSL personalizados ejecutados en GPU con técnicas de Raymarching y partículas computadas por frame. Incorporación de análisis Fast Fourier Transform (FFT) para reactividad sonora en tiempo real y fallback elegante a 2D canvas para dispositivos de baja gama.',
+      title: 'Online Shop — Modelo Transaccional GeneXus',
+      subtitle: 'Arquitectura Transaccional, Reglas de Negocio y Fidelización en GeneXus',
+      image: 'assets/Tienda_Genexus.jpeg',
+      tags: ['GeneXus', 'Modelo Transaccional', 'Business Components', 'Procedimientos', 'Subtipos', 'PDF Report'],
+      problem: 'La gestión de compras en línea requiere modelos relacionales complejos sin ambigüedad de entidades geográficas, además de automatizar programas de fidelización y facturación sin inconsistencias en base de datos.',
+      solution: 'Modelado integral de 9 transacciones relacionales en GeneXus. Se implementaron grupos de subtipos (Pais y Producto) para evitar duplicidad de relaciones, procedimientos automáticos con Business Components para la tarjeta de puntos (VIP al alcanzar 1000 pts) y reporteador PDF de compras.',
       metrics: [
-        { label: 'FPS Promedio', value: '60 FPS' },
-        { label: 'Partículas en GPU', value: '150,000+' },
-        { label: 'Tiempo de Carga Inicial', value: '0.8s' }
+        { label: 'Transacciones', value: '9' },
+        { label: 'Fidelización', value: '5% Puntos' },
+        { label: 'Integridad', value: '100% Relacional' }
       ],
-      githubUrl: 'https://github.com/alexrivera-dev/aura-studio',
-      demoUrl: 'https://aura-studio-webgl.dev'
+      githubUrl: null, /* Sin enlace de GitHub */
+      demoUrl: '#contacto'
     },
     'chronos-flow': {
       title: 'Chronos Flow',
@@ -228,7 +228,16 @@ document.addEventListener('DOMContentLoaded', () => {
     modalImage.alt = `Captura detallada de ${data.title}`;
     modalProblem.textContent = data.problem;
     modalSolution.textContent = data.solution;
-    modalGithubLink.href = data.githubUrl;
+
+    // Mostrar u ocultar el botón de repositorio según disponibilidad de githubUrl
+    if (modalGithubLink) {
+      if (data.githubUrl) {
+        modalGithubLink.href = data.githubUrl;
+        modalGithubLink.style.display = '';
+      } else {
+        modalGithubLink.style.display = 'none';
+      }
+    }
 
     // Render tags
     modalTags.innerHTML = data.tags
