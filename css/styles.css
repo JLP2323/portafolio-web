@@ -1266,26 +1266,30 @@ main>.section:nth-of-type(even) {
   flex-shrink: 0;
 }
 
-.skill-level--advanced {
-  background: color-mix(in srgb, var(--color-primary) 14%, transparent);
+/* Nivel Intermedio — Acento primario suave */
+.skill-level--intermediate {
+  background: color-mix(in srgb, var(--color-primary) 12%, transparent);
   color: var(--color-primary);
-  border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 25%, transparent);
 }
 
-.skill-level--intermediate {
+/* Nivel Básico — Tono neutro/muted */
+.skill-level--basic {
   background: rgba(255, 255, 255, 0.05);
   color: var(--color-text-muted);
   border: 1px solid var(--color-border);
 }
 
 [data-theme="light"] .skill-level--intermediate {
-  background: rgba(15, 23, 42, 0.05);
-}
-
-[data-theme="light"] .skill-level--advanced {
   background: color-mix(in srgb, var(--color-primary) 10%, transparent);
   color: var(--color-primary);
-  border-color: color-mix(in srgb, var(--color-primary) 28%, transparent);
+  border-color: color-mix(in srgb, var(--color-primary) 22%, transparent);
+}
+
+[data-theme="light"] .skill-level--basic {
+  background: rgba(15, 23, 42, 0.05);
+  color: var(--color-text-muted);
+  border-color: var(--color-border);
 }
 
 /* --------------------------------------------------------------------------
