@@ -50,6 +50,7 @@ Portafolio web profesional de Julissa Lescano, estudiante de Ingeniería de Soft
 ## Contacto
 
 *   **GitHub:** [JLP2323](https://github.com/JLP2323)
-
+## Despliegue en Vivo
+* **Sitio Web Público:** https://jlp2323.github.io/portafolio-web/ 
 ---
 *Desarrollado por Julissa Lescano.*
