@@ -1,11 +1,5 @@
-/* ==========================================================================
-   PORTAFOLIO ALEX RIVERA - CSS3 VANILLA & DESIGN SYSTEM
-   Separación estricta de presentación. Cero librerías externas.
-   ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   03. RESET & ESTILOS BASE
-   -------------------------------------------------------------------------- */
+
 *,
 *::before,
 *::after {
@@ -80,7 +74,6 @@ samp {
   font-family: var(--font-accent);
 }
 
-/* Fondo ambiental sutil con degradados radiales */
 body::before {
   content: '';
   position: fixed;
@@ -129,9 +122,6 @@ ol {
   list-style: none;
 }
 
-/* --------------------------------------------------------------------------
-   04. CONTENEDOR & UTILIDADES DE SECCIÓN
-   -------------------------------------------------------------------------- */
 .container {
   width: 100%;
   max-width: var(--container-max-width);
@@ -187,17 +177,11 @@ main>.section:nth-of-type(even) {
   max-width: 640px;
 }
 
-/* Tipografía de Acento */
 .font-accent {
   font-family: var(--font-accent);
   font-weight: 500;
 }
 
-/* --------------------------------------------------------------------------
-   05. DESIGN SYSTEM - COMPONENTES REUTILIZABLES
-   -------------------------------------------------------------------------- */
-
-/* BOTONES */
 .btn {
   font-family: var(--font-body);
   display: inline-flex;
@@ -284,7 +268,6 @@ main>.section:nth-of-type(even) {
   transform: translateY(-2px);
 }
 
-/* BADGES & CHIPS */
 .badge {
   font-family: var(--font-accent);
   display: inline-flex;
@@ -348,7 +331,6 @@ main>.section:nth-of-type(even) {
   border: 1px solid var(--color-border);
 }
 
-/* TARJETAS (CARDS) */
 .card {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -366,7 +348,6 @@ main>.section:nth-of-type(even) {
   transform: translateY(-4px);
 }
 
-/* INPUTS & FORMULARIOS */
 .form-group {
   margin-bottom: var(--space-md);
   position: relative;
@@ -384,7 +365,6 @@ main>.section:nth-of-type(even) {
   margin-bottom: var(--space-xs);
 }
 
-/* INPUTS BASE — dark mode: fondo elevado con contraste WCAG */
 .form-input,
 .form-textarea {
   width: 100%;
@@ -398,7 +378,6 @@ main>.section:nth-of-type(even) {
   transition: all var(--transition-fast);
 }
 
-/* Light mode inputs */
 [data-theme="light"] .form-input,
 [data-theme="light"] .form-textarea {
   background-color: #ffffff;
@@ -433,7 +412,6 @@ main>.section:nth-of-type(even) {
   min-height: 120px;
 }
 
-/* Estado válido e inválido con ícono visual */
 .form-input.is-valid,
 .form-textarea.is-valid {
   border-color: var(--color-success);
@@ -459,7 +437,6 @@ main>.section:nth-of-type(even) {
   box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
 }
 
-/* Contador de caracteres */
 .char-counter {
   font-size: 0.75rem;
   color: var(--color-text-muted);
@@ -477,7 +454,6 @@ main>.section:nth-of-type(even) {
   font-weight: 600;
 }
 
-/* Chips de temática de contacto */
 .topic-chips {
   display: flex;
   flex-wrap: wrap;
@@ -530,7 +506,6 @@ main>.section:nth-of-type(even) {
   display: block;
 }
 
-/* Texto de confianza bajo el botón de envío */
 .form-trust-text {
   text-align: center;
   font-size: 0.8rem;
@@ -542,9 +517,6 @@ main>.section:nth-of-type(even) {
   gap: 6px;
 }
 
-
-
-/* Indicador de disponibilidad con punto pulsante */
 .availability-indicator {
   display: flex;
   align-items: center;
@@ -573,9 +545,6 @@ main>.section:nth-of-type(even) {
   font-weight: 600;
 }
 
-/* --------------------------------------------------------------------------
-   06. HEADER & NAVEGACIÓN
-   -------------------------------------------------------------------------- */
 .header {
   position: sticky;
   top: 0;
@@ -709,9 +678,6 @@ main>.section:nth-of-type(even) {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* --------------------------------------------------------------------------
-   07. HERO SECTION (#inicio)
-   -------------------------------------------------------------------------- */
 .hero {
   padding-top: calc(var(--space-section) + 1rem);
   overflow: hidden;
@@ -768,7 +734,6 @@ main>.section:nth-of-type(even) {
   color: var(--color-text-muted);
 }
 
-/* Hero Visual / Avatar composition */
 .hero-visual {
   position: relative;
   display: flex;
@@ -807,7 +772,6 @@ main>.section:nth-of-type(even) {
   transform: scale(1.08);
 }
 
-/* Floating Badges on Hero */
 .floating-badge {
   position: absolute;
   background: color-mix(in srgb, var(--color-surface) 90%, transparent);
@@ -861,9 +825,6 @@ main>.section:nth-of-type(even) {
   }
 }
 
-/* --------------------------------------------------------------------------
-   08. STATS ROW (BARRA DE MÉTRICAS)
-   -------------------------------------------------------------------------- */
 .stats-section {
   padding-block: var(--space-lg);
 }
@@ -920,9 +881,6 @@ main>.section:nth-of-type(even) {
   color: var(--color-text-muted);
 }
 
-/* --------------------------------------------------------------------------
-   09. SOBRE MÍ (#sobre-mi)
-   -------------------------------------------------------------------------- */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -977,7 +935,6 @@ main>.section:nth-of-type(even) {
   line-height: 1.7;
 }
 
-/* ASIDE SEMÁNTICO: Formación & Líneas de Investigación */
 .about-info-col {
   display: flex;
   flex-direction: column;
@@ -1030,7 +987,6 @@ main>.section:nth-of-type(even) {
   color: var(--color-text-muted);
 }
 
-/* CHIPS DE INTERÉS ACADÉMICO */
 .research-chips {
   display: flex;
   flex-wrap: wrap;
@@ -1063,7 +1019,6 @@ main>.section:nth-of-type(even) {
   border-color: color-mix(in srgb, var(--color-primary) 22%, transparent);
 }
 
-/* PROCESO DE TRABAJO */
 .process-wrapper {
   display: flex;
   flex-direction: column;
@@ -1163,9 +1118,6 @@ main>.section:nth-of-type(even) {
   font-size: 1.1rem;
 }
 
-/* --------------------------------------------------------------------------
-   10. HABILIDADES & STACK TECNOLÓGICO (#habilidades)
-   -------------------------------------------------------------------------- */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1232,7 +1184,6 @@ main>.section:nth-of-type(even) {
   gap: var(--space-md);
 }
 
-/* SKILL ROW — nuevo diseño sin barras de progreso */
 .skill-row {
   display: flex;
   align-items: center;
@@ -1254,7 +1205,6 @@ main>.section:nth-of-type(even) {
   color: var(--color-text);
 }
 
-/* Badges de nivel */
 .skill-level-badge {
   font-family: var(--font-accent);
   font-size: 0.7rem;
@@ -1266,14 +1216,12 @@ main>.section:nth-of-type(even) {
   flex-shrink: 0;
 }
 
-/* Nivel Intermedio — Acento primario suave */
 .skill-level--intermediate {
   background: color-mix(in srgb, var(--color-primary) 12%, transparent);
   color: var(--color-primary);
   border: 1px solid color-mix(in srgb, var(--color-primary) 25%, transparent);
 }
 
-/* Nivel Básico — Tono neutro/muted */
 .skill-level--basic {
   background: rgba(255, 255, 255, 0.05);
   color: var(--color-text-muted);
@@ -1292,9 +1240,6 @@ main>.section:nth-of-type(even) {
   border-color: var(--color-border);
 }
 
-/* --------------------------------------------------------------------------
-   11. PROYECTOS DESTACADOS (#proyectos)
-   -------------------------------------------------------------------------- */
 .projects-filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -1332,7 +1277,6 @@ main>.section:nth-of-type(even) {
   color: #ffffff;
 }
 
-/* Grilla de Proyectos */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1340,7 +1284,6 @@ main>.section:nth-of-type(even) {
   margin-bottom: var(--space-xl);
 }
 
-/* Project Card (semantic <article>) */
 .project-card {
   display: flex;
   flex-direction: column;
@@ -1363,7 +1306,6 @@ main>.section:nth-of-type(even) {
   display: none;
 }
 
-/* Figure & Figcaption */
 .project-figure {
   position: relative;
   width: 100%;
@@ -1437,7 +1379,6 @@ main>.section:nth-of-type(even) {
   gap: var(--space-xs);
 }
 
-/* Cuando solo hay el botón "Ver más" sin iconos, lo alineamos a la izquierda */
 .project-actions:only-child,
 .project-actions > .btn:only-child {
   margin-right: auto;
@@ -1451,7 +1392,6 @@ main>.section:nth-of-type(even) {
   flex-shrink: 0;
 }
 
-/* Si project-icon-links está vacío (o no existe), project-actions no deja hueco */
 .project-icon-links:empty {
   display: none;
 }
@@ -1503,9 +1443,6 @@ main>.section:nth-of-type(even) {
   color: var(--color-text-muted);
 }
 
-/* --------------------------------------------------------------------------
-   12. DESIGN SYSTEM & TOKENS (#design-system)
-   -------------------------------------------------------------------------- */
 .ds-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1532,7 +1469,6 @@ main>.section:nth-of-type(even) {
   justify-content: space-between;
 }
 
-/* Muestras de color */
 .color-swatches-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1568,7 +1504,6 @@ main>.section:nth-of-type(even) {
   color: var(--color-text-dim);
 }
 
-/* Jerarquía tipográfica */
 .typography-spec {
   display: flex;
   flex-direction: column;
@@ -1589,7 +1524,6 @@ main>.section:nth-of-type(even) {
   font-family: var(--font-body);
 }
 
-/* Espaciados y Radio */
 .spacing-spec {
   display: flex;
   flex-direction: column;
@@ -1616,9 +1550,6 @@ main>.section:nth-of-type(even) {
   border-radius: var(--radius-xs);
 }
 
-/* --------------------------------------------------------------------------
-   13. BANNER CTA
-   -------------------------------------------------------------------------- */
 .cta-banner {
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   border-radius: var(--radius-md);
@@ -1672,9 +1603,6 @@ main>.section:nth-of-type(even) {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* --------------------------------------------------------------------------
-   14. FORMULARIO & CONTACTO (#contacto)
-   -------------------------------------------------------------------------- */
 .contact-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -1747,7 +1675,6 @@ main>.section:nth-of-type(even) {
   font-size: 1.1rem;
 }
 
-/* Mensaje de éxito de formulario */
 .form-success-banner {
   display: none;
   background: rgba(16, 185, 129, 0.15);
@@ -1763,9 +1690,6 @@ main>.section:nth-of-type(even) {
   display: block;
 }
 
-/* --------------------------------------------------------------------------
-   15. FOOTER & BACK TO TOP
-   -------------------------------------------------------------------------- */
 .footer {
   padding-block: var(--space-xl);
   border-top: 1px solid var(--color-border);
@@ -1793,7 +1717,6 @@ main>.section:nth-of-type(even) {
   gap: var(--space-xs);
 }
 
-/* Botón flotante volver arriba */
 .back-to-top {
   position: fixed;
   bottom: 24px;
@@ -1832,9 +1755,6 @@ main>.section:nth-of-type(even) {
   color: #ffffff;
 }
 
-/* --------------------------------------------------------------------------
-   16. MODAL DE PROYECTO ACCESIBLE
-   -------------------------------------------------------------------------- */
 .modal-overlay {
   position: fixed;
   inset: 0;
@@ -1932,7 +1852,6 @@ main>.section:nth-of-type(even) {
   object-fit: cover;
 }
 
-/* Encuadre completo para capturas tipo dashboard (ej. Agrobio Analytics) */
 .modal-image.is-contain {
   aspect-ratio: auto;
   max-height: 420px;
@@ -1980,9 +1899,6 @@ main>.section:nth-of-type(even) {
   background-color: var(--color-surface);
 }
 
-/* --------------------------------------------------------------------------
-   17. SISTEMA DE NOTIFICACIONES TOAST
-   -------------------------------------------------------------------------- */
 .toast-container {
   position: fixed;
   bottom: 2rem;
@@ -2010,7 +1926,7 @@ main>.section:nth-of-type(even) {
   min-width: 300px;
   max-width: 420px;
   line-height: 1.5;
-  /* Animación de entrada */
+  
   animation: toast-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   will-change: transform, opacity;
 }
@@ -2063,7 +1979,6 @@ main>.section:nth-of-type(even) {
   }
 }
 
-/* Responsive: en móvil el toast ocupa casi todo el ancho */
 @media (max-width: 480px) {
   .toast-container {
     bottom: 1rem;
@@ -2077,11 +1992,6 @@ main>.section:nth-of-type(even) {
   }
 }
 
-/* --------------------------------------------------------------------------
-   18. MEDIA QUERIES RESPONSIVE (Desktop > 1024, Tablet 768-1024, Móvil < 768)
-   -------------------------------------------------------------------------- */
-
-/* TABLET (768px - 1024px) */
 @media (max-width: 1024px) {
   .hero-grid {
     grid-template-columns: 1fr;
@@ -2129,7 +2039,6 @@ main>.section:nth-of-type(even) {
   }
 }
 
-/* MÓVIL (< 768px) */
 @media (max-width: 768px) {
   body {
     --header-height: 64px;

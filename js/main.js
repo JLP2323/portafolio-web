@@ -1,16 +1,8 @@
-/**
- * ==========================================================================
- * PORTAFOLIO ALEX RIVERA - JAVASCRIPT VANILLA
- * Cero dependencias externas. Todas las funcionalidades reales e interactivas.
- * ==========================================================================
- */
+
 
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
-  // --------------------------------------------------------------------------
-  // 01. DATOS DE PROYECTOS PARA MODAL INTERACTIVO
-  // --------------------------------------------------------------------------
   const PROJECTS_DATA = {
     'nexus-dashboard': {
       title: 'GUIOSAD — Evaluación SWOT & FLOSS',
@@ -59,9 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // --------------------------------------------------------------------------
-  // 02. TOGGLE DE TEMA CLARO / OSCURO (CON PERSISTENCIA EN LOCALSTORAGE)
-  // --------------------------------------------------------------------------
   const themeToggleBtn = document.getElementById('theme-toggle');
   const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('span.theme-icon') : null;
 
@@ -106,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Inicializar tema
   applyTheme(getPreferredTheme());
 
   if (themeToggleBtn) {
@@ -117,9 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --------------------------------------------------------------------------
-  // 03. MENÚ RESPONSIVE MÓVIL (HAMBURGUESA)
-  // --------------------------------------------------------------------------
   const navToggle = document.getElementById('nav-toggle');
   const navMenu = document.getElementById('nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
@@ -151,9 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // --------------------------------------------------------------------------
-  // 04. RESALTADO ACTIVO DE ENLACES SEGÚN SCROLL (ACTIVE NAV LINK)
-  // --------------------------------------------------------------------------
   const sections = document.querySelectorAll('section[id]');
 
   function updateActiveNav() {
@@ -173,9 +155,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', updateActiveNav, { passive: true });
 
-  // --------------------------------------------------------------------------
-  // 05. FILTRO DE PROYECTOS POR CATEGORÍA
-  // --------------------------------------------------------------------------
   const filterButtons = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
 
@@ -204,9 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // --------------------------------------------------------------------------
-  // 06. MODAL INTERACTIVO DE PROYECTO
-  // --------------------------------------------------------------------------
   const modalOverlay = document.getElementById('project-modal');
   const modalCloseBtn = document.getElementById('modal-close-btn');
   const modalTitle = document.getElementById('modal-project-title');
@@ -229,7 +205,6 @@ document.addEventListener('DOMContentLoaded', () => {
     modalProblem.textContent = data.problem;
     modalSolution.textContent = data.solution;
 
-    // Ajuste de encuadre: is-contain solo para 'agrobio-analytics'
     const modalImageContainer = modalOverlay.querySelector('.modal-image');
     if (modalImageContainer) {
       if (projectId === 'agrobio-analytics') {
@@ -239,7 +214,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Mostrar u ocultar el botón de repositorio según disponibilidad de githubUrl
     if (modalGithubLink) {
       if (data.githubUrl) {
         modalGithubLink.href = data.githubUrl;
@@ -249,12 +223,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Render tags
     modalTags.innerHTML = data.tags
       .map(tag => `<span class="badge badge-tech">${tag}</span>`)
       .join('');
 
-    // Render metrics
     modalMetrics.innerHTML = data.metrics
       .map(m => `
         <div class="case-metric-box">
@@ -277,7 +249,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
-  // Delegación de eventos para botones "Ver más"
   document.querySelectorAll('[data-open-modal]').forEach(trigger => {
     trigger.addEventListener('click', (e) => {
       e.preventDefault();
@@ -298,16 +269,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --------------------------------------------------------------------------
-  // 06b. SISTEMA DE NOTIFICACIONES TOAST
-  // --------------------------------------------------------------------------
   const toastContainer = document.getElementById('toast-container');
 
-  /**
-   * Muestra un toast notification.
-   * @param {string} message - Texto del mensaje.
-   * @param {number} [duration=4000] - Duración visible en ms antes de ocultarse.
-   */
   function showToast(message, duration = 4000) {
     if (!toastContainer) return;
 
@@ -321,13 +284,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     toastContainer.appendChild(toast);
 
-    // Auto-ocultar con animación suave tras `duration` ms
     const hideTimer = setTimeout(() => {
       toast.classList.add('is-hiding');
       toast.addEventListener('animationend', () => toast.remove(), { once: true });
     }, duration);
 
-    // Permitir cerrar con clic
     toast.addEventListener('click', () => {
       clearTimeout(hideTimer);
       toast.classList.add('is-hiding');
@@ -335,31 +296,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { once: true });
   }
 
-  // --------------------------------------------------------------------------
-  // 06c. BOTÓN "SOLICITAR DEMO"
-  // --------------------------------------------------------------------------
   const btnRequestDemo = document.getElementById('btn-request-demo');
 
   if (btnRequestDemo) {
     btnRequestDemo.addEventListener('click', () => {
-      // 1. Cerrar el modal suavemente
       closeProjectModal();
 
-      // 2. Disparar toast después de que el modal haya iniciado su cierre
       setTimeout(() => {
         showToast(
           '✓ Solicitud enviada. Te contactaré en breve con las credenciales y acceso al demo.'
         );
       }, 180);
 
-      // 3. Scroll suave a la sección #contacto y preseleccionar chip "Proyecto Web"
       setTimeout(() => {
         const contactSection = document.getElementById('contacto');
         if (contactSection) {
           contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        // Preseleccionar el chip de "Proyecto Web" en el formulario de contacto
         const proyectoWebChip = document.querySelector('.topic-chip[data-topic="Proyecto Web"]');
         if (proyectoWebChip) {
           const topicAsunto = document.getElementById('topic-asunto');
@@ -371,7 +325,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Soporte de tecla Escape para cerrar modal y menú
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       if (modalOverlay && modalOverlay.classList.contains('is-active')) {
@@ -383,9 +336,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // --------------------------------------------------------------------------
-  // 07. VALIDACIÓN REAL DEL FORMULARIO DE CONTACTO
-  // --------------------------------------------------------------------------
   const contactForm = document.getElementById('contact-form');
   const nombreInput = document.getElementById('nombre');
   const emailInput = document.getElementById('email');
@@ -415,7 +365,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Validación interactiva en tiempo real con clases is-valid / is-invalid
   if (nombreInput) {
     nombreInput.addEventListener('input', () => {
       const val = nombreInput.value.trim();
@@ -439,9 +388,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --------------------------------------------------------------------------
-  // 07b. CONTADOR DE CARACTERES DEL TEXTAREA
-  // --------------------------------------------------------------------------
   const charCounter = document.getElementById('char-counter');
   const CHAR_LIMIT = 500;
 
@@ -464,9 +410,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --------------------------------------------------------------------------
-  // 07c. CHIPS DE TEMÁTICA
-  // --------------------------------------------------------------------------
   const topicChips = document.querySelectorAll('.topic-chip');
   const topicAsuntoInput = document.getElementById('topic-asunto');
 
@@ -483,13 +426,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
       let isValid = true;
 
-      // Validar Nombre
       const nombreVal = nombreInput.value.trim();
       if (!nombreVal) {
         setError(nombreInput, 'error-nombre', 'Por favor ingresa tu nombre completo.');
@@ -502,7 +443,6 @@ document.addEventListener('DOMContentLoaded', () => {
         nombreInput.classList.add('is-valid');
       }
 
-      // Validar Email
       const emailVal = emailInput.value.trim();
       if (!emailVal) {
         setError(emailInput, 'error-email', 'Por favor ingresa tu correo electrónico.');
@@ -515,7 +455,6 @@ document.addEventListener('DOMContentLoaded', () => {
         emailInput.classList.add('is-valid');
       }
 
-      // Validar Mensaje
       const mensajeVal = mensajeInput.value.trim();
       if (!mensajeVal) {
         setError(mensajeInput, 'error-mensaje', 'Por favor escribe un mensaje describiendo tu proyecto.');
@@ -543,7 +482,6 @@ document.addEventListener('DOMContentLoaded', () => {
           `;
         }
 
-        // Simulación de envío con confirmación visual
         setTimeout(() => {
           if (submitBtn) {
             submitBtn.disabled = false;
@@ -559,7 +497,6 @@ document.addEventListener('DOMContentLoaded', () => {
             successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
           }
 
-          // Resetear formulario y estados visuales
           contactForm.reset();
           if (charCounter) {
             charCounter.textContent = `0 / ${CHAR_LIMIT}`;
@@ -579,9 +516,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --------------------------------------------------------------------------
-  // 08. BOTÓN "VOLVER ARRIBA" (BACK TO TOP)
-  // --------------------------------------------------------------------------
   const backToTopBtn = document.getElementById('back-to-top');
 
   if (backToTopBtn) {
