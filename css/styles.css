@@ -1928,6 +1928,23 @@ main>.section:nth-of-type(even) {
   object-fit: cover;
 }
 
+/* Encuadre completo para capturas tipo dashboard (ej. Agrobio Analytics) */
+.modal-image.is-contain {
+  aspect-ratio: auto;
+  max-height: 420px;
+  background-color: var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-image.is-contain img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: contain;
+}
+
 .modal-detail-block {
   margin-bottom: var(--space-md);
 }

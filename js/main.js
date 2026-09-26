@@ -27,19 +27,19 @@ document.addEventListener('DOMContentLoaded', () => {
       githubUrl: 'https://github.com/JavicSoftCode-01/swot_software_evaluation.git', 
       demoUrl: '#contacto'
     },
-    'aura-studio': {
-      title: 'Online Shop — Modelo Transaccional GeneXus',
-      subtitle: 'Arquitectura Transaccional, Reglas de Negocio y Fidelización en GeneXus',
-      image: 'assets/Tienda_Genexus.jpeg',
-      tags: ['GeneXus', 'Modelo Transaccional', 'Business Components', 'Procedimientos', 'Subtipos', 'PDF Report'],
-      problem: 'La gestión de compras en línea requiere modelos relacionales complejos sin ambigüedad de entidades geográficas, además de automatizar programas de fidelización y facturación sin inconsistencias en base de datos.',
-      solution: 'Modelado integral de 9 transacciones relacionales en GeneXus. Se implementaron grupos de subtipos (Pais y Producto) para evitar duplicidad de relaciones, procedimientos automáticos con Business Components para la tarjeta de puntos (VIP al alcanzar 1000 pts) y reporteador PDF de compras.',
+    'agrobio-analytics': {
+      title: 'Agrobio Analytics — Dashboard Agroclimático',
+      subtitle: 'Monitoreo de Cultivos, Telemetría Agrícola y Visualización de Datos con Streamlit & PostgreSQL',
+      image: 'assets/Dashboard_Agroclimático.jpeg',
+      tags: ['Python', 'Streamlit', 'PostgreSQL', 'Pandas', 'Plotly', 'Data Analytics'],
+      problem: 'La falta de centralización y monitoreo estructurado de variables agroclimáticas (humedad, temperatura, radiación) genera pérdidas en el rendimiento de cultivos y dificulta la toma de decisiones preventivas ante eventos meteorológicos críticos.',
+      solution: 'Desarrollo de una arquitectura analítica modular en Python con persistencia en PostgreSQL (agrobio_db). Se implementaron módulos de consultas optimizadas, agregaciones temporales con Pandas, tarjetas de KPI agroclimáticos y gráficos interactivos multivariables en Plotly integrados en un dashboard responsivo con Streamlit.',
       metrics: [
-        { label: 'Transacciones', value: '9' },
-        { label: 'Fidelización', value: '5% Puntos' },
-        { label: 'Integridad', value: '100% Relacional' }
+        { label: 'Variables Agroclimáticas', value: '8+ Métricas' },
+        { label: 'Visualizaciones', value: 'Plotly Dinámico' },
+        { label: 'Persistencia', value: 'PostgreSQL Relacional' }
       ],
-      githubUrl: null, /* Sin enlace de GitHub */
+      githubUrl: 'https://github.com/JLP2323/AGROMATICA-TRABAJO-EXPERIMENTAL',
       demoUrl: '#contacto'
     },
     'bike-rental': {
@@ -228,6 +228,16 @@ document.addEventListener('DOMContentLoaded', () => {
     modalImage.alt = `Captura detallada de ${data.title}`;
     modalProblem.textContent = data.problem;
     modalSolution.textContent = data.solution;
+
+    // Ajuste de encuadre: is-contain solo para 'agrobio-analytics'
+    const modalImageContainer = modalOverlay.querySelector('.modal-image');
+    if (modalImageContainer) {
+      if (projectId === 'agrobio-analytics') {
+        modalImageContainer.classList.add('is-contain');
+      } else {
+        modalImageContainer.classList.remove('is-contain');
+      }
+    }
 
     // Mostrar u ocultar el botón de repositorio según disponibilidad de githubUrl
     if (modalGithubLink) {
