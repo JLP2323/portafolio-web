@@ -42,20 +42,20 @@ document.addEventListener('DOMContentLoaded', () => {
       githubUrl: null, /* Sin enlace de GitHub */
       demoUrl: '#contacto'
     },
-    'chronos-flow': {
-      title: 'Chronos Flow',
-      subtitle: 'Suite Empresarial de Productividad y Flujos de Trabajo Offline-First',
-      image: 'assets/chronos-flow.jpg',
-      tags: ['Next.js 14', 'PostgreSQL', 'Prisma', 'Full-Stack', 'IndexedDB'],
-      problem: 'Los equipos distribuidos experimentan pérdida de sincronización y lentitud en aplicaciones de gestión de tareas cuando enfrentan conexiones inestables o intermitentes.',
-      solution: 'Arquitectura Offline-first sustentada en IndexedDB local con CRDTs (Conflict-free Replicated Data Types) para reconciliación automática de cambios al recuperar conectividad. Backend serverless con Next.js 14 y PostgreSQL sobre Prisma ORM.',
+    'bike-rental': {
+      title: 'Bike Rental Prediction — Demanda con Deep Learning',
+      subtitle: 'Red Neuronal Artificial (ANN), API REST en Flask y Dashboard Interactivo',
+      image: 'assets/Alquiler_Biciletas_1.jpeg', 
+      tags: ['Python', 'TensorFlow', 'Keras', 'Scikit-Learn', 'Pandas', 'Flask', 'JavaScript'],
+      problem: 'La asignación ineficiente de flotas en sistemas públicos de transporte en bicicleta genera desabastecimiento en horas pico y sobrecostos operativos por falta de modelos predictivos que consideren variables meteorológicas complejas.',
+      solution: 'Entrenamiento de un modelo de Red Neuronal Profunda con TensorFlow/Keras y StandardScaler sobre datasets horarios (hour.csv). Se desplegó una arquitectura desacoplada con servidor Flask, endpoints JSON para inferencia en tiempo real y cliente web con JavaScript interactivo para simular escenarios climáticos.',
       metrics: [
-        { label: 'Disponibilidad Offline', value: '100%' },
-        { label: 'Resolución de Conflictos', value: 'Automática' },
-        { label: 'Tiempo de Sincronización', value: '< 200ms' }
+        { label: 'Dataset', value: '17,000+ Filas' },
+        { label: 'Tiempo de Inferencia', value: '< 50ms' },
+        { label: 'Parámetros Analizados', value: '12 Variables' }
       ],
-      githubUrl: 'https://github.com/alexrivera-dev/chronos-flow',
-      demoUrl: 'https://chronos-flow-app.dev'
+      githubUrl: 'https://github.com/JLP2323/Prediccion_Alquiler_Bicicleta',
+      demoUrl: '#contacto'
     }
   };
 
